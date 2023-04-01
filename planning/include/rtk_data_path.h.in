@@ -1,0 +1,4 @@
+#pragma once
+#include <string>
+std::string rtk_data_path = "${rtk_data_path}";
+std::string rtk_config_path = "${rtk_config_path}";

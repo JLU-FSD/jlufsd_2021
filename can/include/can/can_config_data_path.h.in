@@ -1,0 +1,4 @@
+#pragma once
+#include <string>
+std::string can_config_data_path = "${can_config_data_path}";
+std::string can_dbcs_path = "${can_dbcs_path}";

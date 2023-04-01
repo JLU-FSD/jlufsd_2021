@@ -1,0 +1,220 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: xwt
+
+
+BO_ 1847 RevrStatus: 8 Vector__XXX
+ SG_ DiffId : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiffTime : 39|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hdop_Receiver : 23|16@0+ (0.1,0) [0|0] "" Vector__XXX
+ SG_ SateliteNum_Secondary : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ SateliteNum_Primary : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1846 RevrAttitude: 8 Vector__XXX
+ SG_ Track_Receiver : 55|16@0+ (0.01,0) [0|360] "deg" Vector__XXX
+ SG_ Baseline : 39|16@0+ (0.001,0) [0|0] "m" Vector__XXX
+ SG_ Pitch_Receiver : 23|16@0- (0.01,0) [-90|90] "deg" Vector__XXX
+ SG_ Yaw_Receiver : 7|16@0+ (0.01,0) [0|360] "deg" Vector__XXX
+
+BO_ 1845 RevrVelocity: 8 Vector__XXX
+ SG_ VelocityHorizon_Receiver : 55|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+ SG_ VelocityUp_Receiver : 39|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+ SG_ VelocityNorth_Receiver : 23|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+ SG_ VelocityEast_Receiver : 7|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+
+BO_ 1844 RevrAltitude: 8 Vector__XXX
+ SG_ AltitudeUndulation : 39|32@0- (0.001,0) [0|0] "m" Vector__XXX
+ SG_ Altitude_Receiver : 7|32@0- (0.001,0) [0|0] "m" Vector__XXX
+
+BO_ 1843 RevrPosition: 8 Vector__XXX
+ SG_ Longitude_Receiver : 39|32@0- (1E-007,0) [-180|180] "deg" Vector__XXX
+ SG_ Latitude_Receiver : 7|32@0- (1E-007,0) [-90|90] "deg" Vector__XXX
+
+BO_ 1842 RevrUtcTime: 8 Vector__XXX
+ SG_ UtcTime_Receiver : 39|32@0+ (0.001,0) [0|0] "" Vector__XXX
+ SG_ UtcDate_Receiver : 7|32@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1841 RevrGpsTime: 6 Vector__XXX
+ SG_ GpsSecond_Receiver : 23|32@0+ (0.001,0) [0|0] "" Vector__XXX
+ SG_ GpsWeek_Receiver : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1827 IMU_3: 8 Vector__XXX
+ SG_ Gyro_Z : 39|32@0- (1.42857142857143E-007,0) [0|0] "deg/s" Vector__XXX
+ SG_ Gyro_Y : 7|32@0- (1.42857142857143E-007,0) [0|0] "deg/s" Vector__XXX
+
+BO_ 1826 IMU_2: 8 Vector__XXX
+ SG_ Gyro_X : 39|32@0- (1.42857142857143E-007,0) [0|0] "deg/s" Vector__XXX
+ SG_ Accel_Z : 7|32@0- (1.42857142857143E-007,0) [0|0] "g" Vector__XXX
+
+BO_ 1825 IMU_1: 8 Vector__XXX
+ SG_ Accel_Y : 39|32@0- (1.42857142857143E-007,0) [0|0] "g" Vector__XXX
+ SG_ Accel_X : 7|32@0- (1.42857142857143E-007,0) [0|0] "g" Vector__XXX
+
+BO_ 1808 CombineStatus: 8 Vector__XXX
+ SG_ GpsFlag : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DmiFlag : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NavFlag : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1801 StdAttitude: 6 Vector__XXX
+ SG_ RollStd : 39|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+ SG_ PitchStd : 23|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+ SG_ YawStd : 7|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+
+BO_ 1800 StdVelocity: 6 Vector__XXX
+ SG_ VelocityUpStd : 39|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+ SG_ VelocityNorthStd : 23|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+ SG_ VelocityEastStd : 7|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+
+BO_ 1799 StdPosition: 6 Vector__XXX
+ SG_ AltitudeStd : 39|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+ SG_ LongitudeStd : 23|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+ SG_ LatitudeStd : 7|16@0+ (0.0001,0) [0|0] "" Vector__XXX
+
+BO_ 1798 CombineAttitude: 8 Vector__XXX
+ SG_ Roll : 47|20@0- (0.001,0) [-180|180] "deg" Vector__XXX
+ SG_ Pitch : 19|20@0- (0.001,0) [-90|90] "deg" Vector__XXX
+ SG_ Yaw : 7|20@0+ (0.001,0) [0|360] "deg" Vector__XXX
+
+BO_ 1797 CombineVelocity: 8 Vector__XXX
+ SG_ VelocityHorizon : 55|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+ SG_ VelocityUp : 39|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+ SG_ VelocityNorth : 23|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+ SG_ VelocityEast : 7|16@0- (0.01,0) [0|0] "m/s" Vector__XXX
+
+BO_ 1796 CombineAltitude: 8 Vector__XXX
+ SG_ AltitudeUndulation : 39|32@0- (0.001,0) [0|0] "m" Vector__XXX
+ SG_ Altitude : 7|32@0- (0.001,0) [0|0] "m" Vector__XXX
+
+BO_ 1795 CombinePosition: 8 Vector__XXX
+ SG_ Longitude : 39|32@0- (1E-007,0) [-180|180] "deg" Vector__XXX
+ SG_ Latitude : 7|32@0- (1E-007,0) [-90|90] "deg" Vector__XXX
+
+BO_ 1794 CombineUtcTime: 8 Vector__XXX
+ SG_ UtcMilSecond : 63|8@0+ (0.01,0) [0|100] "s" Vector__XXX
+ SG_ UtcSecond : 55|8@0+ (1,0) [0|60] "s" Vector__XXX
+ SG_ UtcMinute : 47|8@0+ (1,0) [0|60] "" Vector__XXX
+ SG_ UtcHour : 39|8@0+ (1,0) [0|24] "" Vector__XXX
+ SG_ UtcDate : 31|8@0- (1,0) [0|31] "" Vector__XXX
+ SG_ UtcMonth : 23|8@0+ (1,0) [0|12] "" Vector__XXX
+ SG_ UtcYear : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1793 CombineGpsTime: 8 Vector__XXX
+ SG_ GpsSecond : 23|32@0+ (0.001,0) [0|604800] "s" Vector__XXX
+ SG_ GpsWeek : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+
+
+CM_ SG_ 1793 GpsSecond "s";
+BA_DEF_ BO_  "SingleFrame" INT 0 1;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "Yes","No";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","reserved","OnChange","reserved","reserved","reserved","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "Yes","No";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","reserved","cyclicIfActive","reserved","reserved","reserved","reserved","reserved","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "SingleFrame" 1;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "NMEA2000";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DBName" "xwt";
+BA_ "VFrameFormat" BO_ 1847 0;
+BA_ "VFrameFormat" BO_ 1846 0;
+BA_ "VFrameFormat" BO_ 1845 0;
+BA_ "VFrameFormat" BO_ 1844 0;
+BA_ "VFrameFormat" BO_ 1843 0;
+BA_ "VFrameFormat" BO_ 1842 0;
+BA_ "VFrameFormat" BO_ 1841 0;
+BA_ "VFrameFormat" BO_ 1827 0;
+BA_ "VFrameFormat" BO_ 1826 0;
+BA_ "VFrameFormat" BO_ 1825 0;
+BA_ "VFrameFormat" BO_ 1808 0;
+BA_ "VFrameFormat" BO_ 1801 0;
+BA_ "VFrameFormat" BO_ 1800 0;
+BA_ "VFrameFormat" BO_ 1799 0;
+BA_ "VFrameFormat" BO_ 1798 0;
+BA_ "VFrameFormat" BO_ 1797 0;
+BA_ "VFrameFormat" BO_ 1796 0;
+BA_ "VFrameFormat" BO_ 1795 0;
+BA_ "VFrameFormat" BO_ 1794 0;
+BA_ "VFrameFormat" BO_ 1793 0;
+

@@ -1,0 +1,5 @@
+rate: 100
+log_file_name: can_node.csv
+can_type: SocketCAN # or EsdCan
+can_config_files: ["socket_can0.yaml","socket_can1.yaml"] #["esd_can0.yaml","esd_can1.yaml"]
+can_send_channel: 0

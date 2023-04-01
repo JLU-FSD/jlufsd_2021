@@ -1,0 +1,122 @@
+VERSION"HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYNNNNNNNNNN/4/%%%/4/'%**4NNN///"
+
+NS_ :
+        NS_DESC_
+        CM_
+        BA_DEF_
+        BA_
+        VAL_
+        CAT_DEF_
+        CAT_
+        FILTER
+        BA_DEF_DEF_
+        EV_DATA_
+        ENVVAR_DATA_
+        SGTYPE_
+        SGTYPE_VAL_
+        BA_DEF_SGTYPE_
+        BA_SGTYPE_
+        SIG_TYPE_REF_
+        VAL_TABLE_
+        SIG_GROUP_
+        SIG_VALTYPE_
+        SIGTYPE_VALTYPE_
+        BO_TX_BU_
+        BA_DEF_REL_
+        BA_REL_
+        BA_DEF_DEF_REL_
+        BU_SG_REL_
+        BU_EV_REL_
+        BU_BO_REL_
+
+BS_:
+
+BU_: RT3000
+
+BO_ 1536 DateTime: 8  RT3000
+ SG_ TimeYear : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ TimeCentury : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TimeMonth : 16|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ TimeDay : 24|8@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ TimeHSecond : 32|8@1+ (0.01,0) [0|1.00] "s" Vector__XXX
+ SG_ TimeSecond : 40|8@1+ (1,0) [0|60] "s" Vector__XXX
+ SG_ TimeMinute : 48|8@1+ (1,0) [0|60] "min" Vector__XXX
+ SG_ TimeHour : 56|8@1+ (1,0) [0|24] "hr" Vector__XXX
+
+BO_ 1537 LatitudeLongitude: 8  RT3000
+ SG_ PosLat : 0|32@1- (1E-007,0) [-214.7483648|214.7483647] "°" Vector__XXX
+ SG_ PosLon : 32|32@1- (1E-007,0) [-214.7483648|214.7483647] "°" Vector__XXX
+
+BO_ 1538 Altitude: 4  RT3000
+ SG_ PosAlt : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "m" Vector__XXX
+
+BO_ 1539 Velocity: 8  RT3000
+ SG_ VelNorth : 0|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ VelEast : 16|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ VelDown : 32|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ Speed2D : 48|16@1+ (0.01,0) [0|655.35] "m/s" Vector__XXX
+
+BO_ 1540 VelocityLevel: 4  RT3000
+ SG_ VelForward : 0|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ VelLateral : 16|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+
+BO_ 1541 AccelVehicle: 6  RT3000
+ SG_ AccelX : 0|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelY : 16|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelZ : 32|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+
+BO_ 1542 AccelLevel: 8  RT3000
+ SG_ AccelForward : 0|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelLateral : 16|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelDown : 32|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelSlip : 48|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+
+BO_ 1543 HeadingPitchRoll: 6  RT3000
+ SG_ AngleHeading : 0|16@1+ (0.01,0) [0|655.35] "°" Vector__XXX
+ SG_ AnglePitch : 16|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+ SG_ AngleRoll : 32|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+
+BO_ 1544 RateVehicle: 6  RT3000
+ SG_ AngRateX : 0|16@1- (0.01,0) [-327.68|327.67] "°/s" Vector__XXX
+ SG_ AngRateY : 16|16@1- (0.01,0) [-327.68|327.67] "°/s" Vector__XXX
+ SG_ AngRateZ : 32|16@1- (0.01,0) [-327.68|327.67] "°/s" Vector__XXX
+
+BO_ 1545 RateLevel: 6  RT3000
+ SG_ AngRateForward : 0|16@1- (0.01,0) [-327.68|327.67] "°/s" Vector__XXX
+ SG_ AngRateLateral : 16|16@1- (0.01,0) [-327.68|327.67] "°/s" Vector__XXX
+ SG_ AngRateDown : 32|16@1- (0.01,0) [-327.68|327.67] "°/s" Vector__XXX
+
+BO_ 1546 TrackSlipCurvature: 6  RT3000
+ SG_ AngleTrack : 0|16@1+ (0.01,0) [0|655.35] "°" Vector__XXX
+ SG_ AngleSlip : 16|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+ SG_ Curvature : 32|16@1- (0.0001,0) [-3.2768|3.2767] "1/m" Vector__XXX
+
+BO_ 1547 Distance: 8  RT3000
+ SG_ DistanceWithHold : 0|32@1+ (0.001,0) [0|4294967.295] "m" Vector__XXX
+ SG_ Distance : 32|32@1+ (0.001,0) [0|4294967.295] "m" Vector__XXX
+
+BO_ 1548 PosLocal: 8  RT3000
+ SG_ PosLocalX : 0|32@1- (0.0001,0) [-214748.3648|214748.3647] "m" Vector__XXX
+ SG_ PosLocalY : 32|32@1- (0.0001,0) [-214748.3648|214748.3647] "m" Vector__XXX
+
+BO_ 1549 VelYawLocal: 8  RT3000
+ SG_ VelLocalX : 0|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ VelLocalY : 16|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ AngleLocalYaw : 32|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+ SG_ AngleLocalTrack : 48|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+
+BO_ 1550 AngAccelVehicle: 6  RT3000
+ SG_ AngAccelX : 0|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+ SG_ AngAccelY : 16|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+ SG_ AngAccelZ : 32|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+
+BO_ 1551 AngAccelLevel: 6  RT3000
+ SG_ AngAccelForward : 0|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+ SG_ AngAccelLateral : 16|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+ SG_ AngAccelDown : 32|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+
+BO_ 1572 HeadingPitchRollFromSurf: 6  RT3000
+ SG_ AngleHeadingFromSurf : 0|16@1+ (0.01,0) [0|655.35] "°" Vector__XXX
+ SG_ AnglePitchFromSurf : 16|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+ SG_ AngleRollFromSurf : 32|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+

@@ -1,0 +1,6 @@
+can_channel: 2
+txqueuesize: 8
+rxqueuesize: 8
+tx_timeout: 1000
+rx_timeout: 3000
+baud: 2 #2::500kbits/s

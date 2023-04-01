@@ -1,0 +1,18 @@
+velocity_estimate_topic_name: /estimation/velocity_estimation/velocity_estimate
+slam_map_topic_name: /estimation/slam/map
+slam_state_topic_name: /estimation/slam/state
+
+trajectory_topic_name: /planning/trajectory
+center_line_topic_name: /planning/center_line
+
+control_topic_name: /control/pure_pursuit/control_command
+follow_point_topic_name: /planning/follow_point
+yellow_point_cloud_name: /planning/yellow_point_cloud
+blue_point_cloud_name: /planning/blue_point_cloud
+
+left_boundry_topic_name: /planning/left_boundry
+right_boundry_topic_name: /planning/right_boundry
+
+max_speed: 2  # [m/s]
+
+node_rate: 20   # [Herz]

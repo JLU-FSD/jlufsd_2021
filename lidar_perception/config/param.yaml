@@ -1,0 +1,7 @@
+lidar_to_camera_distance_x: 0.55
+lidar_to_camera_distance_z: 0.37638746
+error_distance: 0.03
+r: red_cone
+b: blue_cone
+y: yellow_cone
+yh: yellow_cone_high

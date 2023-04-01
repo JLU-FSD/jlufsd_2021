@@ -1,0 +1,113 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU EPS GATEWAY
+VAL_TABLE_ YawRateOffset 4095 "Invalid value" ;
+VAL_TABLE_ ErrorStatus 1 "Error" 0 "No Error" ;
+VAL_TABLE_ ANVStatus 1 "on" 0 "off" ;
+
+
+BO_ 80 EPS_1: 6 EPS
+ SG_ EPSFaultCode : 32|16@1+ (1,0) [0|101020] "" Vector__XXX
+ SG_ LiveCounter_EPS1 : 8|8@1+ (1,0) [0|255] "Nr. of pulses" Vector__XXX
+ SG_ EPSStauts : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Checksum_EPS1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 96 VCU_1: 8 GATEWAY
+ SG_ CarNumber : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ EPSFunctionReset : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPSEnable : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Checksum_VCU1 : 0|8@1+ (1,0) [0|255] ""  EPS
+ SG_ LiveCounter_VCU1 : 48|8@1+ (1,0) [0|255] ""  EPS
+ SG_ EPSControlMode : 56|2@1+ (1,0) [0|3] ""  EPS
+ SG_ TargetSteeringWheelAngle : 8|15@1+ (0.04375,0) [0|1433.5125] "deg"  EPS
+ SG_ TargetSteeringWheelAngleSign : 23|1@1+ (1,0) [0|1] ""  EPS
+ SG_ TargetSteeringWheelSpeed : 24|15@1+ (0.04375,0) [0|1433.5125] "deg"  EPS
+ SG_ TargetSteeringWheelSpeedSign : 39|1@1+ (1,0) [0|1] ""  EPS
+
+
+
+CM_ BU_ GATEWAY "Gateway";
+CM_ SG_ 80 LiveCounter_EPS1 "EPS counter for live check";
+CM_ SG_ 80 EPSStauts "Status of EPS.";
+CM_ SG_ 80 Checksum_EPS1 "checksum of message EPS_1";
+CM_ SG_ 96 CarNumber "The Number of Cars.";
+CM_ SG_ 96 EPSFunctionReset "reset EPS function from standby.";
+CM_ SG_ 96 EPSEnable "EPS function enable switch.";
+CM_ SG_ 96 Checksum_VCU1 "checksum of message VCU_1";
+CM_ SG_ 96 LiveCounter_VCU1 "VCU counter for live check";
+CM_ SG_ 96 EPSControlMode "Control mode of EPS.";
+CM_ SG_ 96 TargetSteeringWheelAngle "Target angle of steering wheel (raw data)";
+CM_ SG_ 96 TargetSteeringWheelAngleSign "Target sign of steering wheel angle (+/-)
+definition according to DIN 70000 / ISO 8855
+wheel position to left = positive
+wheel position to right = negative
+wheel position straightforward = 0 (positive)";
+CM_ SG_ 96 TargetSteeringWheelSpeed "Target steering wheel rotation speed (raw data)";
+CM_ SG_ 96 TargetSteeringWheelSpeedSign "Target sign of steering wheel speed (+/-)
+definition according to DIN 70000 / ISO 8855
+wheel to left = positive
+wheel to right = negative
+wheel straightforward = 0 (positive)";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","CyclicIfActive","CyclicAndSpontaneous","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "FAW_C131_EXT_CAN_V30";
+BA_ "GenMsgCycleTime" BO_ 80 10;
+BA_ "GenMsgCycleTime" BO_ 96 10;
+BA_ "GenMsgSendType" BO_ 96 0;
+BA_ "GenSigInactiveValue" SG_ 80 EPSStauts 1;
+BA_ "GenSigInactiveValue" SG_ 96 CarNumber 1;
+BA_ "GenSigInactiveValue" SG_ 96 EPSFunctionReset 10;
+BA_ "GenSigInactiveValue" SG_ 96 EPSEnable 10;
+BA_ "GenSigInactiveValue" SG_ 96 EPSControlMode 1;
+VAL_ 80 EPSStauts 4 "Standby" 3 "Error detected" 2 "Speed control" 1 "Angle control" 0 "No control" ;
+VAL_ 96 EPSControlMode 2 "Double control" 1 "Speed control" 0 "Angle control" ;
+VAL_ 96 TargetSteeringWheelAngle 32767 "Invalid Value" ;
+VAL_ 96 TargetSteeringWheelAngleSign 1 "Right(Negative)" 0 "Left(Positive)" ;
+VAL_ 96 TargetSteeringWheelSpeed 32767 "Invalid Value" ;
+VAL_ 96 TargetSteeringWheelSpeedSign 1 "Right(Negative)" 0 "Left(Positive)" ;
+

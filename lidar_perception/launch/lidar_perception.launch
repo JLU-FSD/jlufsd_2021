@@ -1,0 +1,12 @@
+<launch>
+    <include file="$(find velodyne_pointcloud)/launch/VLP-32C_points.launch" />
+	<node pkg="lidar_perception" type="lidar_perception_node" name="lidar_perception" output="screen">
+	</node>
+	<rosparam file="$(find lidar_perception)/config/param.yaml" command="load" />
+	
+<!--	
+	<include file="$(find bbox)/launch/bbox.launch">
+	</include>
+-->
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_perception)/rviz/lidar_perception.rviz" />
+</launch>

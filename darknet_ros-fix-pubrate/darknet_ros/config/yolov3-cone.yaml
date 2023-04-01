@@ -1,0 +1,15 @@
+yolo_model:
+
+  config_file:
+    name: yolov3-cone.cfg
+  weight_file:
+    name: darknet_yolov3.weights
+  threshold:
+    value: 0.6
+  detection_classes:
+    names:
+      - red_cone
+      - yellow_cone
+      - blue_cone
+      - yellow_cone_high
+
